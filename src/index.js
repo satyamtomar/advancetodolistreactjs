@@ -298,7 +298,7 @@ return(
                 <option value='Completed'>Completed</option>
          </select>      
      </div>
-<div id="grid-container">
+<div className="grid-container" id='grid-container'>
 
     {
         proxyTodos.map((todo,index)=>{

@@ -30,6 +30,12 @@
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    border:2px solid #6284a0;
+    background-color: #bac5cf;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(191, 169, 245);
+    /* margin-bottom: 10px; */
 }
 .inputField1
 {
@@ -281,3 +287,63 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+
+ 
+
+
+@media screen and (max-width: 1100px) 
+{
+    /* Your CSS rules go here. These will apply to screens that are 400px wide or less. */
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important; /* Creates a 3-column grid */
+        gap: 5px; /* Adds a gap between grid items */
+        /* padding: 10px 10px; */
+        margin-left: auto;
+        margin-right: auto;
+        /* background-color: rgb( 18,18,18 ); */
+      }
+    
+  }
+
+
+
+  @media screen and (max-width: 400px) {
+  
+    .creationArea{
+        /* width: 350px !important; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+    }
+    .dueDateInput
+    {
+      height: 30px !important;
+      width: 200px !important;
+    }
+    /* .search-container{
+        display: flex;
+        flex-direction: row;
+    } */
+    
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) !important; /* Creates a 3-column grid */
+            gap: 5px; /* Adds a gap between grid items */
+            /* padding: 10px 10px; */
+            margin-left: auto;
+            margin-right: auto;
+            /* background-color: rgb( 18,18,18 ); */
+          }
+       
+    }
