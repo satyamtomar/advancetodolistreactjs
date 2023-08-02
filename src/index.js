@@ -51,6 +51,8 @@ const  AddTask=()=> {
  setProxyTodos([...todos,item]);
  setReminder([...todos,item]);
 setTitle('');
+setDueDate('');
+setReminderTime('')
     }
     else
     {
@@ -64,6 +66,9 @@ setTitle('');
         setReminder(newTodos);
         setTitle('');
         setEditId('');
+        // setPriority()
+setDueDate('');
+setReminderTime('')
     }
 
   setReminder();
@@ -104,6 +109,9 @@ setProxyTodos(todos.filter((todo,indexT)=> indexT!==index));
   const handleEdit=(todo,index)=>
   {
    setTitle(todo.title);
+   setDueDate(todo.dueDate);
+   setReminderTime(todo.reminderTime);
+   setPriority(todo.priority);
    setEditId(todo.id);
    
     
@@ -250,13 +258,13 @@ return(
      </div>
      <div className='dueDate'>
         <span>Due Date</span>
-        <input className='dueDateInput' id='dueDateInput' type="datetime-local" onChange={(e)=>{setDueDate(e.target.value);console.log(e.target.value,'dd');}}/>
+        <input className='dueDateInput' id='dueDateInput' type="datetime-local" value={dueDate} onChange={(e)=>{setDueDate(e.target.value);console.log(e.target.value,'dd');}}/>
 
      </div>
      
      <div class="reminder">
      <span> Add Reminder</span>
-          <input type="datetime-local" id="reminderTime" onChange={(e)=>{setReminderTime(e.target.value);console.log(e.target.value,'rr');}}/>
+          <input type="datetime-local" id="reminderTime" value={reminderTime} onChange={(e)=>{setReminderTime(e.target.value);console.log(e.target.value,'rr');}}/>
        
           
          </div>
@@ -270,7 +278,7 @@ return(
               </select>
          </div>
      <div className='AddTaskBut'>
-        <button className='addTaskButton' onClick={AddTask}>Add Task</button>
+        <button className='addTaskButton' onClick={AddTask}>{editId==''?'Add':'Edit'} Task</button>
      </div>
 
    </div>
