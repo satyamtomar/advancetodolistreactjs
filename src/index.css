@@ -1,13 +1,283 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#grid-container {
+    margin-top:3%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* This creates a grid with 3 columns of equal size. */
+    grid-gap: 10px; /* This sets the gap between the grid items. */
+    padding:5px ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.grid-item {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(101, 130, 167);
 }
+.container
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 100%;
+    height: 100%;
+}
+.creationArea
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inputField1
+{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-around;
+  width: 40%;
+  align-items: center;
+  gap: 10px;
+    /* width: 60%; */
+}
+
+.dueDate
+{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-around;
+  width: 40%;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.reminder
+{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-around;
+  width: 40%;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.dueDateInput
+{
+    height:30px;
+    width: 50%;
+    background-color: #6b879d;
+    border-radius: 5px;
+    border: 1px ;
+}
+#reminderTime
+{
+    height:30px;
+    width: 50%;
+    background-color: #6b879d;
+    border-radius: 5px;
+    border: 1px ;
+}
+.priority
+  {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-around;
+  width: 40%;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  }
+ #priorityList
+  {
+    height:30px;
+    width: 50%;
+    /* background-color: #6b879d; */
+    border-radius: 5px;
+    /* border: 1px ; */
+  }
+  .filterAndSort
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 95%;
+    gap:10px;
+    /* margin: 5px; */
+    padding-left:10px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  .dueTask
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  #sortSelect
+  {
+    height:30px;
+    width: 10%;
+    /* background-color: #6b879d; */
+    border-radius: 5px;
+   
+  }
+  #FilterList
+{
+    height:30px;
+    width: 10%;
+    /* background-color: #6b879d; */
+    border-radius: 5px;
+    
+}
+.taskTitle
+{
+    height: 30px;
+    width: 200px;
+
+}
+
+.addTaskButton
+{
+    background-color: rgb(158, 194, 225);
+    border-radius:5px ;
+    padding: 5px;
+}
+
+
+.title-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list-item-func
+{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.deleteButton
+{
+    background-color: rgb(158, 194, 225);
+    border-radius:5px ;
+  
+}
+
+.editButton
+{
+    background-color: rgb(100, 146, 185);
+    border-radius:5px ;
+
+}
+
+.filterSearch
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    padding:10px;
+    justify-content: center;
+    width: 100%;
+}
+.searchBar
+{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.markDone{
+    text-decoration: line-through;
+
+}
+
+.markAsDone
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+.alert-box {
+    padding: 20px;
+    background-color: #f44336; /* Red background */
+    color: white; /* White text color */
+    margin-bottom: 15px;
+    opacity: 1;
+    transition: opacity 0.6s; /* 600ms to fade out */
+  }
+  
+  .alert-box.info {
+    background-color: #2196F3; /* Blue background */
+  }
+  
+  .alert-box.success {
+    background-color: #4CAF50; /* Green background */
+  }
+  
+  .alert-box.warning {
+    background-color: #ff9800; /* Orange background */
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  
+
+  .lowPriority
+  {
+    background-color: #2196F3;
+
+  }
+
+  .mediumPriority
+  {
+    background-color: #6284a0;
+
+  }
+
+  .highPriority
+  {
+    background-color: #456279;
+  }
+
+  .priorityOrPending
+  {
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
